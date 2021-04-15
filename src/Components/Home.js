@@ -7,12 +7,13 @@ import Carouselbody from "./Hero/Carouselbody";
 import Hero from "./Hero/Hero";
 import Videobody from "./Videodiv/Videobody";
 import { motion } from "framer-motion";
+import ThatH from "../Components/ThatHearder/ThatH";
 // import NavBar from "./NavBar";
 
 function Home() {
   return (
     <div>
-      <Hero />
+      <ThatH />
       <Counter />
       <MainCard />
       <Videobody />

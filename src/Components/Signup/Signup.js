@@ -44,123 +44,143 @@ function SignUp() {
   };
 
   return (
-    <div>
-      <Modal
-        aria-labelledby="transition-modal-title"
-        aria-describedby="transition-modal-description"
-        className={classes.modal}
-        open={open}
-        onClose={handleClose}
-        closeAfterTransition
-        BackdropComponent={Backdrop}
-        BackdropProps={{
-          timeout: 500,
+    <>
+      <Button
+        onClick={() => {
+          handleOpen()
+        }}
+        className="sectionButton"
+        style={{
+          color: "#4285f4",
+          fontSize: "20px",
+          height: "50px",
+          borderRadius: "5px",
+          border: "none",
+          width: "200px",
+          cursor: "pointer"
+          // backgroundColor:
         }}
       >
-        <Fade in={open}>
-          <motion.div
-            initial={{ y: "-100vh" }}
-            animate={{ y: 0 }}
-            className="thin1"
-          >
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                width: "100%",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
+        Get Started
+          </Button>
+      <div>
+        <Modal
+          aria-labelledby="transition-modal-title"
+          aria-describedby="transition-modal-description"
+          className={classes.modal}
+          open={open}
+          onClose={handleClose}
+          closeAfterTransition
+          BackdropComponent={Backdrop}
+          BackdropProps={{
+            timeout: 500,
+          }}
+        >
+          <Fade in={open}>
+            <motion.div
+              initial={{ y: "-100vh" }}
+              animate={{ y: 0 }}
+              className="thin1"
             >
-              <div style={{ fontSize: "20px", fontWeight: "bold" }}>
-                sign up now as a teacher
-              </div>
-              <br />
-              <br />
-
-              <input
-                type="text"
-                placeholder="Name"
+              <div
                 style={{
-                  height: "30px",
-                  width: "70%",
-                  paddingLeft: "20px",
-                  margin: "10px",
-                }}
-              />
-
-              <input
-                type="text"
-                placeholder="Email"
-                style={{
-                  height: "30px",
-                  width: "70%",
-                  paddingLeft: "20px",
-                  margin: "10px",
-                }}
-              />
-
-              <input
-                style={{
-                  color: "black",
-                  height: "30px",
-                  width: "70%",
-                  paddingLeft: "20px",
-                  margin: "10px",
-                }}
-                type="password"
-                placeholder="Password"
-              />
-
-              <input
-                style={{
-                  color: "black",
-                  height: "30px",
-                  width: "70%",
-                  paddingLeft: "20px",
-                  margin: "10px",
-                }}
-                type="text"
-                placeholder="Biography"
-              />
-              {/* <br /> */}
-              <Button
-                style={{
-                  width: "30%",
-                  height: "50px",
-                  borderRadius: "5px",
-                  backgroundColor: "#34384A",
-                  color: "white",
-                  border: "1px solid gray",
-                  fontFamily: "poppins",
-                  outline: "none",
-                  cursor: "pointer",
-                  // marginTop: "20px",
+                  display: "flex",
+                  justifyContent: "center",
+                  width: "100%",
+                  flexDirection: "column",
+                  alignItems: "center",
                 }}
               >
-                SIGN UP
-              </Button>
+                <div style={{ fontSize: "20px", fontWeight: "bold" }}>
+                  sign up now as a teacher
+              </div>
+                <br />
+                <br />
 
-              {/* <br /> */}
-              <div style={{ display: "flex" }}>
-                Already Have an Account ?
-                {/* <Link style={{ textDecoration: "none" }} to="/signup"> */}
-                <div
+                <input
+                  type="text"
+                  placeholder="Name"
                   style={{
-                    marginLeft: "10px",
-                    color: "red",
+                    height: "30px",
+                    width: "70%",
+                    paddingLeft: "20px",
+                    margin: "10px",
+                  }}
+                />
+
+                <input
+                  type="text"
+                  placeholder="Email"
+                  style={{
+                    height: "30px",
+                    width: "70%",
+                    paddingLeft: "20px",
+                    margin: "10px",
+                  }}
+                />
+
+                <input
+                  style={{
+                    color: "black",
+                    height: "30px",
+                    width: "70%",
+                    paddingLeft: "20px",
+                    margin: "10px",
+                  }}
+                  type="password"
+                  placeholder="Password"
+                />
+
+                <input
+                  style={{
+                    color: "black",
+                    height: "30px",
+                    width: "70%",
+                    paddingLeft: "20px",
+                    margin: "10px",
+                  }}
+                  type="text"
+                  placeholder="Biography"
+                />
+                {/* <br /> */}
+                <Button
+                  style={{
+                    width: "30%",
+                    height: "50px",
+                    borderRadius: "5px",
+                    backgroundColor: "#34384A",
+                    color: "white",
+                    border: "1px solid gray",
+                    fontFamily: "poppins",
+                    outline: "none",
                     cursor: "pointer",
+                    // marginTop: "20px",
                   }}
                 >
-                  <div>login</div>
+                  SIGN UP
+              </Button>
+
+                {/* <br /> */}
+                <div style={{ display: "flex" }}>
+                  Already Have an Account ?
+                {/* <Link style={{ textDecoration: "none" }} to="/signup"> */}
+                  <div
+                    style={{
+                      marginLeft: "10px",
+                      color: "red",
+                      cursor: "pointer",
+                    }}
+                  >
+                    <div>login</div>
+                  </div>
+                  {/* </Link> */}
                 </div>
-                {/* </Link> */}
               </div>
-            </div>
-          </motion.div>
-        </Fade>
-      </Modal>
-    </div>
+            </motion.div>
+          </Fade>
+        </Modal>
+      </div>
+    </>
   );
 }
 
